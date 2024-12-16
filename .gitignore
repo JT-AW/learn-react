@@ -1,1 +1,15 @@
 .DS_Store
+
+# Node.js and NPM
+**/node_modules/
+.npm/
+npm-debug.log
+
+# Package management files
+package-lock.json
+yarn.lock
+yarn-debug.log
+yarn-error.log
+.yarn/
+.yarn-integrity
+.pnp.*

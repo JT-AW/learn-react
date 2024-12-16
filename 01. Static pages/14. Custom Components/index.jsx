@@ -12,5 +12,27 @@ const root = createRoot(document.getElementById("root"))
  */
 
 root.render(
-    
+    <Page />
 )
+
+function Page() {
+    return (
+        <div>
+            <header>
+                <img src="react-logo.png" width="40px" alt="React Logo" img/>
+            </header>
+            <main>
+                <h1> Reasons I love React! </h1>
+                <ol>
+                    <li>Was first released in 2013</li>
+                    <li>Has well over 200K stars on Github</li>
+                    <li>Is maintained by meta</li>
+                    <li>Powers thousands of enterprise apps, including mobile apps</li>
+                </ol>
+            </main>
+            <footer>
+                <small>Wang development.</small>
+            </footer>
+        </div>
+    )
+}

@@ -1,9 +1,9 @@
-// import { createRoot } from "react-dom/client"
-// const root = createRoot(document.getElementById("root"))
+import { createRoot } from "react-dom/client"
+const root = createRoot(document.getElementById("root"))
 
-// root.render(
-//     <h1>Hello, React!</h1>
-// )
+root.render(
+    <h1 className="header">Hello, React!</h1>
+)
 
 
 /* 
@@ -18,4 +18,9 @@ appending an h1 to our div#root (without using innerHTML).
 Don't use innerHTML to accomplish any of this.
     
 */
+// const rt = document.getElementById("root")
 
+// const h1_elem = document.createElement("h1")
+// h1_elem.textContent = "Hello, World!"
+// h1_elem.className = "header"
+// rt.appendChild(h1_elem)

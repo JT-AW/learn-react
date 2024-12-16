@@ -1,5 +1,6 @@
 1. What is a React component?
 
+Function that returns an isolated, renderable element that can be reused in many different places in a web page. Represented as a JS function.
 
 2. What's wrong with this code?
 ```
@@ -9,6 +10,8 @@ function myComponent() {
     )
 }
 ```
+
+No Pascal case.
 
 3. What's wrong with this code?
 ```
@@ -22,3 +25,5 @@ function Header() {
 
 root.render(Header())
 ```
+
+Should use <Header /> instead.
