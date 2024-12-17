@@ -13,3 +13,23 @@
  *   currently are, so don't worry about the fact that you're hard-coding all
  *   this data into the component.
  */
+export default function Entry() {
+    return (
+        <article className="entry">
+            <div className="entry_image_container">
+                <img className="entry_image" src="../images/fuji.jpg" alt="Mt. Fuji" img/>
+            </div>
+            <section className="entry_desc">
+                <div className="entry_header">
+                    <img src="../images/marker.png" alt="marker icon" img/>
+                    <h3>JAPAN</h3>
+                    <a href="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu">View on Google Maps</a>
+                </div>
+                <h1>Mount Fuji</h1>
+                <text className="date">12 Jan, 2021 - 24 Jan, 2021</text>
+                <text>Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.</text>
+            </section>
+        </article>
+
+    )
+}

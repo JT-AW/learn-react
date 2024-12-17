@@ -17,7 +17,7 @@ export default function App() {
                 punchline="It's hard to explain puns to kleptomaniacs because they always take things literally."
             />
             <Joke
-                setup="How did the hacker escape the police?"
+                setup={32}
                 punchline="He just ransomware!"
             />
             <Joke

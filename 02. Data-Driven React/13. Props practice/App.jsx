@@ -16,9 +16,30 @@
  * If you don't pass in a "question" prop, how might you make it only 
  * show the punchline?
  */
+import Joke from "./components/Joke"
 
 export default function App() {
     return (
-        <></>
+        <>
+            <Joke
+                setup= "I got my daughter a fridge for her birthday."
+                punchline= "I can't wait to see her face light up when she opens it."
+            />
+            <Joke
+                setup="Why did the chicken cross the road?"
+                punchline="To get to the other side!"
+            />
+            <Joke
+                setup="How did the hacker escape the police?"
+                punchline="He just ransomware!"
+            />
+            <Joke
+                setup="Why don't pirates travel on mountain roads?"
+                punchline="Scurvy"
+            />
+            <Joke
+                setup="I am Yu, he is Mi."
+            />
+        </>
     )
 }
