@@ -8,13 +8,14 @@ export default function App() {
      * Joke component in the .map() (and render the jokeElements array) so 
      * the jokes show up on the page again
      */
-    
+    // const ninjaTurtles = ["Donatello", "Michaelangelo", "Rafael", "Leonardo"]
     const jokeElements = jokesData.map((joke) => {
-        return <Joke  />
+        return <Joke setup={joke.setup} punchline={joke.punchline} />
     })
+    // const ninjaElements = ninjaTurtles.map((ninja)=><h2>{ninja}</h2>)
     return (
         <main>
-            
+            {jokeElements}
         </main>
     )
 }
