@@ -6,6 +6,10 @@ function App() {
     console.log("I was clicked!")
   }
   
+  function handleHover() {
+    console.log("I was hovered!")
+  }
+
   /**
    * Challenge: add our new function to the button
    */
@@ -15,8 +19,9 @@ function App() {
       <img
         src="https://picsum.photos/640/360"
         alt="Placeholder image from Picsum"
+        onMouseOver={handleHover}
       />
-      <button onClick={}>Click me</button>
+      <button onClick={handleClick}>Click me</button>
     </main>
   )
 }
