@@ -2,10 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 function App() {
+
+  function signUp(formData) {
+    const user = formData.get("email")
+    const pass = formData.get("password")
+    console.log(user + " " + pass)
+  }
+
   return (
     <section>
       <h1>Signup form</h1>
-      <form>
+      <form action={signUp}>
         <label htmlFor="email">Email:</label>
         <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
         <br />

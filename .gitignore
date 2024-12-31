@@ -13,3 +13,4 @@ yarn-error.log
 .yarn/
 .yarn-integrity
 .pnp.*
+pnpm-lock.yaml

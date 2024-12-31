@@ -10,9 +10,10 @@ function App() {
    */
 
   function signUp(formData) {
-    const email = formData.get("email")
-    const password = formData.get("password")
-    console.log(password)
+    const data = Object.fromEntries(formData)
+    const dietaryData = formData.getAll("dietaryRestrictions")
+    data.dietaryRestrictions = dietaryData
+    console.log(data)
   }
 
   return (
@@ -30,22 +31,28 @@ function App() {
         <textarea id="description" name="description" defaultValue="This is a description"></textarea>
 
         <fieldset>
-          <legend>Employment Status:</legend>
+          <legend>Dietary Restrictions:</legend>
           <label>
-            <input type="radio" name="employmentStatus" />
-            Unemployed
-        </label>
+            <input type="checkbox" name="dietaryRestrictions" value="Vegetarian" />
+            Vegetarian
+          </label>
           <label>
-            <input type="radio" name="employmentStatus" />
-            Part-time
-        </label>
+            <input type="checkbox" name="dietaryRestrictions" value="Vegan" />
+            Vegan
+          </label>
           <label>
-            <input type="radio" name="employmentStatus" />
-            Full-time
-        </label>
+            <input type="checkbox" name="dietaryRestrictions" value="Gluten-Free" defaultChecked={true}/>
+            Gluten-Free
+          </label>
         </fieldset>
 
-
+        <label htmlFor="favoriteColor">Favorite Color:</label>
+        <select id="favoriteColor" name="favoriteColor">
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
 
         <button>Submit</button>
 
