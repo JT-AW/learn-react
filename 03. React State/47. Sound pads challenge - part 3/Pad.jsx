@@ -1,3 +1,5 @@
+import React from "react"
+
 export default function Pad(props) {
     /**
      * Challenge part 3:
@@ -5,9 +7,11 @@ export default function Pad(props) {
      * so if the button is "on", it has the className of "on".
      */
     
-    return (
+    return ( 
         <button 
             style={{backgroundColor: props.color}}
+            className={props.on ? "on" : undefined} // && doesn't really work here
+            onClick={props.toggle}
         ></button>
     )
 }

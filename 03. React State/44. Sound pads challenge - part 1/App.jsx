@@ -1,4 +1,6 @@
-import pads from "./pads"
+import React from "react"
+import initialPads from "./pads"
+import Pad from "./Pad"
 
 export default function App() {
     /**
@@ -10,10 +12,16 @@ export default function App() {
      *    (Don't worry about using the "on" or "color" 
      *    properties yet)
      */
+    const [pads, setPads] = React.useState(initialPads)
+
+    const padElements = pads.map((pad) => 
+        <Pad key={pad.id} color={pad.color} />
+        )
+
     return (
         <main>
             <div className="pad-container">
-                {/* <button>s go here */}
+                {padElements}
             </div>
         </main>
     )
