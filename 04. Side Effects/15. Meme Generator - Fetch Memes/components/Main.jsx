@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Main() {
     const [meme, setMeme] = useState({
@@ -6,6 +6,7 @@ export default function Main() {
         bottomText: "Walk into Mordor",
         imageUrl: "http://i.imgflip.com/1bij.jpg"
     })
+    const [allMemes, setAllMemes] = useState([])
     
     /**
      * Challenge:
@@ -22,6 +23,20 @@ export default function Main() {
      * Instead, use `.then()` to resolve the promises
      * from using `fetch`. We'll learn why after this challenge.
      */
+    // const randomIndex = Math.floor(Math.random() * 100);
+    // .then(meme => {
+    //     setMeme((prevMeme) => ({
+    //         ...prevMeme,
+    //         imageUrl: meme["url"]
+    // }))})
+    useEffect(
+        () => {
+            fetch("https://api.imgflip.com/get_memes")
+                .then((memes) => memes.json())
+                .then(memes => setAllMemes(memes.data.memes))
+
+        }, []
+    )
     
     
     

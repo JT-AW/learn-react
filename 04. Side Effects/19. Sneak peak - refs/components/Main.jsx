@@ -8,6 +8,7 @@ export default function Main() {
         ["chicken", "all the main spices", "corn", "heavy cream", "pasta"]
     )
     const [recipe, setRecipe] = React.useState("")
+    const recipeSection = React.useRef(null)
 
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
@@ -33,6 +34,7 @@ export default function Main() {
 
             {ingredients.length > 0 &&
                 <IngredientsList
+                    recipeSection={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
                 />

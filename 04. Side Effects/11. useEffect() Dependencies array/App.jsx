@@ -5,13 +5,11 @@ export default function App() {
     const [count, setCount] = React.useState(0)
     
     console.log("Rendered!")
-    
-    React.useEffect(function() {
-        console.log("Effect ran")
-        fetch("https://swapi.dev/api/people/1")
-            .then(res => res.json())
-            // .then(data => setStarWarsData(data))
-    }, [0])
+
+    React.useEffect(
+        () => console.log("useEffect ran!"),
+        []
+    )
     
     return (
         <div>
